@@ -43,12 +43,36 @@ sass使用方法
       /*指定参数*/
       @mixin right($value: 10px) {margin-right: $value;}
       div{ @include right(20px);}
-    * 颜色函数
-      /*SASS提供了一些内置的颜色函数*/
-       rgb($red,$green,$blue)：根据红、绿、蓝三个值创建一个颜色；
-       red($color)：从一个颜色中获取其中红色值；
-       mix($color-1,$color-2,[$weight])：把两种颜色混合在一起。
-       lighten(#cc3, 10%) // #d6d65c
+    * 函数
+      * SASS提供了一些内置的颜色函数<br>
+       rgb($red,$green,$blue)：根据红、绿、蓝三个值创建一个颜色；<br>
+       red($color)：从一个颜色中获取其中红色值；<br>
+       mix($color-1,$color-2,[$weight])：把两种颜色混合在一起。<br>
+       lighten(#cc3, 10%) // #d6d65c<br>
+      * 字符串函数
+       unquote()函数 //主要是用来删除一个字符串中的引号，如果这个字符串没有带有引号，将返回原始的字符串<br>
+       quote()函数   //刚好与  unquote()  函数功能相反，主要用来给字符串添加引号<br>
+       To-upper-case()函数 //将字符串小写字母转换成大写字母<br>
+       To-lower-case()函数 //大写变小写<br>
+      * 数字函数
+       percentage($value)：将一个不带单位的数转换成百分比值；
+       ceil($value)：将大于自己的小数转换成下一位整数；
+       floor($value)：将一个数去除他的小数部分；
+       round($value)；abs($value)；min($numbers…)；max($numbers…)；random()；/*等同javascript的Math函数*/
+      * 列表函数
+       length($list)：返回一个列表的长度值；length(10px 20px (border 1px solid) 2em)//4
+       nth($list, $n)：返回一个列表中指定的某个标签值；nth((Helvetica,Arial,sans-serif),2)//Arial
+       join($list1, $list2, [$separator])：将两个列给连接在一起，变成一个列表；join(10px，20px)//10px 20px
+       append($list1, $val, [$separator])：将某个值放在列表的最后；append((10px,20px),30px)//10px 20px 30px
+       zip($lists…)：将几个列表结合成一个多维的列表；zip(1px 2px,solid dashed,green blue)//1px solid green 2px dashed blue
+       index($list, $value)：返回一个值在列表中的位置值。index(1px solid red, solid)//2
+      * Introspection函数
+       type-of($value)：返回一个值的类型；type-of(1 / 2 = 1)//string  type-of(#fff)//color
+       unit($number)：返回一个值的单位；unit(1em)//em  unit(10px / 3em)//px/em
+       unitless($number)：判断一个值是否带有带位；unitless(100px)//false  unitless(100)//true
+       comparable($number-1, $number-2)：判断两个值是否可以做加、减和合并；comparable(2px,1px)//true  comparable(2px,1%)//false
+      * Miscellaneous函数
+       if(true,1px,2px)//1px  if(false,1px,2px)//2px
     * 插入文件
       @import "path/filename.scss";/*如果插入的是css文件则等同于css的import*/
 + 高级用法  
@@ -56,10 +80,17 @@ sass使用方法
       div{ @if 1 + 3 >= 2 { border: 1px solid; } }
       @if lightness($color) > 30% { color: #000; } 
       @else { color: #fff; }
-      
-      
-      
-      
+    * 循环语句
+      * for 
+         @for $i from 1 to 10 { .border-a#{$i} { border: #{$i}px solid blue; } }
+      * while
+         $i: 6;
+         @while $i > 0 { .border-a#{$i} { border:#{$i}px solid blue; }$i: $i - 1; }
+      * each
+         @each $member in a, b, c, d { .img-#{$member} { background-image: url("/image/#{$member}.jpg");} }  
+    * 自定义函数
+       @function double($n) { @return $n * 2; }
+       #sidebar { width: double(5px); }
       
       
       
