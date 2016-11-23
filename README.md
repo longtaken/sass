@@ -42,34 +42,34 @@ sass使用方法
       div{ @include right(20px);}
     * 函数
       * SASS提供了一些内置的颜色函数<br>
-       * rgb($red,$green,$blue)：根据红、绿、蓝三个值创建一个颜色；<br>
-       * red($color)：从一个颜色中获取其中红色值；<br>
-       * mix($color-1,$color-2,[$weight])：把两种颜色混合在一起。<br>
-       * lighten(#cc3, 10%) // #d6d65c<br>
+        * rgb($red,$green,$blue)：根据红、绿、蓝三个值创建一个颜色；<br>
+        * red($color)：从一个颜色中获取其中红色值；<br>
+        * mix($color-1,$color-2,[$weight])：把两种颜色混合在一起。<br>
+        * lighten(#cc3, 10%) // #d6d65c<br>
       * 字符串函数<br>
-       * unquote()函数 //主要是用来删除一个字符串中的引号，如果这个字符串没有带有引号，将返回原始的字符串<br>
-       * quote()函数   //刚好与  unquote()  函数功能相反，主要用来给字符串添加引号<br>
-       * To-upper-case()函数 //将字符串小写字母转换成大写字母<br>
-       * To-lower-case()函数 //大写变小写<br>
+        * unquote()函数 //主要是用来删除一个字符串中的引号，如果这个字符串没有带有引号，将返回原始的字符串<br>
+        * quote()函数   //刚好与  unquote()  函数功能相反，主要用来给字符串添加引号<br>
+        * To-upper-case()函数 //将字符串小写字母转换成大写字母<br>
+        * To-lower-case()函数 //大写变小写<br>
       * 数字函数<br>
-       * percentage($value)：将一个不带单位的数转换成百分比值；<br>
-       * ceil($value)：将大于自己的小数转换成下一位整数；<br>
-       * floor($value)：将一个数去除他的小数部分；<br>
+        * percentage($value)：将一个不带单位的数转换成百分比值；<br>
+        * ceil($value)：将大于自己的小数转换成下一位整数；<br>
+        * floor($value)：将一个数去除他的小数部分；<br>
         * round($value)；abs($value)；min($numbers…)；max($numbers…)；random()；//等同javascript的Math函数
       * 列表函数<br>
-       * length($list)：返回一个列表的长度值；length(10px 20px (border 1px solid) 2em)//4<br>
-       * nth($list, $n)：返回一个列表中指定的某个标签值；nth((Helvetica,Arial,sans-serif),2)//Arial<br>
-       * join($list1, $list2, [$separator])：将两个列给连接在一起，变成一个列表；join(10px，20px)//10px 20px<br>
-       * append($list1, $val, [$separator])：将某个值放在列表的最后；append((10px,20px),30px)//10px 20px 30px<br>
-       * zip($lists…)：将几个列表结合成一个多维的列表；zip(1px 2px,solid dashed,green blue)//1px solid green 2px dashed blue<br>
-       * index($list, $value)：返回一个值在列表中的位置值。index(1px solid red, solid)//2<br>
+        * length($list)：返回一个列表的长度值；length(10px 20px (border 1px solid) 2em)//4<br>
+        * nth($list, $n)：返回一个列表中指定的某个标签值；nth((Helvetica,Arial,sans-serif),2)//Arial<br>
+        * join($list1, $list2, [$separator])：将两个列给连接在一起，变成一个列表；join(10px，20px)//10px 20px<br>
+        * append($list1, $val, [$separator])：将某个值放在列表的最后；append((10px,20px),30px)//10px 20px 30px<br>
+        * zip($lists…)：将几个列表结合成一个多维的列表；zip(1px 2px,solid dashed,green blue)//1px solid green 2px dashed blue<br>
+        * index($list, $value)：返回一个值在列表中的位置值。index(1px solid red, solid)//2<br>
       * Introspection函数<br>
         * type-of($value)：返回一个值的类型；type-of(1 / 2 = 1)//string  type-of(#fff)//color<br>
-       * unit($number)：返回一个值的单位；unit(1em)//em  unit(10px / 3em)//px/em<br>
-       * unitless($number)：判断一个值是否带有带位；unitless(100px)//false  unitless(100)//true<br>
-       * comparable($number-1, $number-2)：判断两个值是否可以做加、减和合并；comparable(2px,1px)//true  comparable(2px,1%)//false<br>
+        * unit($number)：返回一个值的单位；unit(1em)//em  unit(10px / 3em)//px/em<br>
+        * unitless($number)：判断一个值是否带有带位；unitless(100px)//false  unitless(100)//true<br>
+        * comparable($number-1, $number-2)：判断两个值是否可以做加、减和合并；comparable(2px,1px)//true  comparable(2px,1%)//false<br>
       * Miscellaneous函数
-       * if(true,1px,2px)//1px  if(false,1px,2px)//2px
+        * if(true,1px,2px)//1px  if(false,1px,2px)//2px
     * 插入文件
       @import "path/filename.scss";//如果插入的是css文件则等同于css的import
 + 高级用法  
