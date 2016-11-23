@@ -1,0 +1,73 @@
+$red:#f00;
+$direction:left;
+$size:20px;
+
+@function db($val){
+	@return $val*2;
+}
+
+div{
+	background-color:$red;
+}
+.sass{
+	border-#{$direction}-radius:5px;
+	padding:10px+20px $size*2;
+}
+
+body{
+	h2{
+		margin:{
+			left:nth((20px,10px,30px),2);
+		}
+
+		padding:join(10px 10px,20px 30px);
+
+		&:hover{
+			color:orange;
+		}
+	}
+}
+
+.extend{
+	color: gray;
+}
+.extend-a{
+	@extend .extend;
+	height: 30px;
+}
+
+@mixin left($val:10px){
+	float: left;
+	margin-left:$val;
+}
+.extend-a{
+	@include left(20px);
+	background-color: rgb(99,59,14);
+	border:1px solid mix(#ff2345,#442255);
+	outline: 1px solid lighten(#f00,50%);
+	content: quote("123afds");
+	width:percentage(0.6);
+}
+
+.content{
+	height:if(true,30px,20px);
+	content: quote(type_of(#fff));
+	@if $red==#f00{border:1px solid;}
+	@if lightness($red)>30%{color:#442255}
+	@else{color:#ff6614}
+	width:db(200px);
+}
+
+@for $i from 1 to 4{
+	.a#{$i}{border:#{$i}px solid blue;margin-bottom:#{$i}px}
+}
+
+
+//bunengyongzhongwenzhushi
+/*xuyaopeizhiyigewenjian*/
+/*!
+	config.rb compass
+
+	# set the css file encoding
+	Encoding.default_external = "utf-8"
+*/
