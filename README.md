@@ -53,9 +53,7 @@ sass使用方法
         * To-lower-case()函数 //大写变小写<br>
       * 数字函数<br>
         * percentage($value)：将一个不带单位的数转换成百分比值；<br>
-        * ceil($value)：将大于自己的小数转换成下一位整数；<br>
-        * floor($value)：将一个数去除他的小数部分；<br>
-        * round($value)；abs($value)；min($numbers…)；max($numbers…)；random()；//等同javascript的Math函数
+        * ceil($value)；floor($value)；round($value)；abs($value)；min($numbers…)；max($numbers…)；random()；//等同javascript的Math函数
       * 列表函数<br>
         * length($list)：返回一个列表的长度值；length(10px 20px (border 1px solid) 2em)//4<br>
         * nth($list, $n)：返回一个列表中指定的某个标签值；nth((Helvetica,Arial,sans-serif),2)//Arial<br>
