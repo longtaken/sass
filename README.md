@@ -71,7 +71,8 @@ sass使用方法
       * Miscellaneous函数
         * if(true,1px,2px)//1px  if(false,1px,2px)//2px
     * 插入文件
-      @import "path/filename.scss";//如果插入的是css文件则等同于css的import
+      @import "path/filename.scss";<br>
+      //如果插入的是css文件则等同于css的import
 + 高级用法  
     * 条件语句<br>
       div{ @if 1 + 3 >= 2 { border: 1px solid; } }<br>
