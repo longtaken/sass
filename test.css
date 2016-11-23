@@ -1,0 +1,56 @@
+div {
+  background-color: #f00; }
+
+.sass {
+  border-left-radius: 5px;
+  padding: 30px 40px; }
+
+body h2 {
+  margin-left: 10px;
+  padding: 10px 10px 20px 30px; }
+  body h2:hover {
+    color: orange; }
+
+.extend, .extend-a {
+  color: gray; }
+
+.extend-a {
+  height: 30px; }
+
+.extend-a {
+  float: left;
+  margin-left: 20px;
+  background-color: #633b0e;
+  border: 1px solid #a2234d;
+  outline: 1px solid white;
+  content: "123afds";
+  width: 60%; }
+
+.content {
+  height: 30px;
+  content: "color";
+  border: 1px solid;
+  color: #442255;
+  width: 400px; }
+
+.a1 {
+  border: 1px solid blue;
+  margin-bottom: 1px; }
+
+.a2 {
+  border: 2px solid blue;
+  margin-bottom: 2px; }
+
+.a3 {
+  border: 3px solid blue;
+  margin-bottom: 3px; }
+
+/*xuyaopeizhiyigewenjian*/
+/*!
+	config.rb compass
+
+	# set the css file encoding
+	Encoding.default_external = "utf-8"
+*/
+
+/*# sourceMappingURL=test.css.map */
